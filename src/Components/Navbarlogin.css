@@ -1,0 +1,90 @@
+.navbar 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  background-color: #007bff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9000;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.nav-head a 
+{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-head a span 
+{
+  color: black;
+  font-size: 30px;
+}
+.navbar-item-logout{
+  color: white;
+}
+.navbar-list 
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar-item 
+{
+  margin: 0;
+}
+
+.navbar-item a 
+{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.navbar-item a:hover 
+{
+  text-decoration: none;
+  color: black;
+}
+
+.logout a 
+{
+  display: flex;
+  align-items: center;
+}
+
+.logout svg 
+{
+  margin-right: 3px;
+  margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) 
+{
+  .navbar-list {
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    justify-content: flex-end; /* Align wrapped items to the right */
+  }
+  .navbar-item {
+    margin-right: 1000px; /* Reduce margins on smaller screens */
+    
+  }
+  .nav-head {
+    flex: 1; /* Ensure nav-head takes necessary space */
+  }
+}

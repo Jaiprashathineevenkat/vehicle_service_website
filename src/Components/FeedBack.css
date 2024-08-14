@@ -1,0 +1,48 @@
+.feedback-container 
+{
+    display: flex;
+    min-height: 100vh;
+    
+    
+  }
+  
+  .feedback-content {
+    flex-grow: 1;
+    padding: 30px;
+    margin-left: 290px; /* Adjust this width based on your sidebar width */
+  }
+  
+  .feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    min-width: 400px;
+  }
+  
+  .feedback-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .feedback-table th,
+  .feedback-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .feedback-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .feedback-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .feedback-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+
+
+  

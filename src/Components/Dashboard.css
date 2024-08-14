@@ -1,0 +1,81 @@
+/* ... other styles ... */
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding-left: 250px; /* Adjust based on sidebar width */
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 40px; /* Add some margin to push the content right */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center;
+  padding-top: 90px; /* Ensure the content is below the navbar */
+}
+
+.dashboard-widgets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px; /* Added margin for spacing */
+}
+
+.widget 
+{
+  flex: 1 1 calc(25% - 40px);
+  min-width: 200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.widget h2 {
+  margin: 10px 0;
+  font-size: 2em;
+}
+
+.widget p {
+  margin: 0.5em 0 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.widget-icon {
+  color: #007bff;
+  margin-bottom: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Keyframe for pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

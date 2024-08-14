@@ -1,0 +1,73 @@
+/* src/ServicesDetails.css */
+
+.service-details-container {
+  display: flex;
+}
+
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.service-details-content {
+  margin-left: 290px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-details-header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  margin: 0 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.toggle-button.active {
+  background-color: #0056b3;
+}
+
+.service-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.service-item {
+  text-align: center;
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 220px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  color: #007bff;
+}

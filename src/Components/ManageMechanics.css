@@ -1,0 +1,82 @@
+/* MechanicsManagement.css */
+
+.mechanics-management-container {
+  display: flex;
+}
+
+.mechanics-management-content {
+  margin-left: 260px; /* Adjust according to the sidebar width */
+  padding: 20px;
+  flex: 1;
+  max-width: calc(100% - 260px); /* Adjust width to fit beside sidebar */
+  overflow: auto; /* Ensure content is scrollable if needed */
+}
+
+.mechanics-management-header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 50px; /* Ensure space from the top */
+}
+
+.mechanic-list {
+  margin: 0 auto; /* Center align */
+  max-width: 600px; /* Limit width for better alignment */
+}
+
+.mechanic-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative; /* For positioning the assign button */
+  display: flex;
+  flex-direction: column;
+}
+
+.mechanic-item:hover {
+  background-color: #f0f0f0;
+}
+
+.mechanic-item .assign-button {
+  align-self: flex-end;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px; /* Smaller font size */
+}
+
+.mechanic-item .assign-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-mechanic-form {
+  margin-top: 20px;
+  max-width: 600px; /* Limit width for better alignment */
+  margin: 0 auto; /* Center align */
+}
+
+.edit-mechanic-form input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 100%; /* Ensure full width within max-width */
+}
+
+.edit-mechanic-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-mechanic-form button:hover {
+  background-color: #0056b3;
+}

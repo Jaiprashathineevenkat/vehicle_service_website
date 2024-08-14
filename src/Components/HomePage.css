@@ -1,0 +1,127 @@
+/* src/HomePage.css */
+
+.home-page 
+{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.hero-section 
+{
+  background-color: #282c34;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration:none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.services-overview, .featured-services, .testimonials {
+  padding: 20px;
+  text-align: center;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.services-header h2 {
+  margin: 0;
+  margin-left: 650px;
+}
+
+.book-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+
+.services-list, .featured-list, .testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.service-item, .featured-item, .testimonial-item {
+  flex: 1;
+  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.testimonial-item p {
+  font-style: italic;
+}
+
+.testimonial-item span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: right;
+}
+.service-item, .featured-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-item svg, .featured-item svg {
+  margin-bottom: 10px;
+}
+.book-button {
+  max-width: 300px; /* Set a maximum width for the button */
+  width: 100%; /* Ensures the button doesn't exceed its container's width */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 20px auto; /* Center the button and add some margin */
+  display: block; /* Make the button block-level to center it */
+  text-align: center; /* Ensure text is centered */
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+

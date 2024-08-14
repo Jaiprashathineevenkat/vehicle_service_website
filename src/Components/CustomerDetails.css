@@ -1,0 +1,134 @@
+/* CustomerDetails.css */
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 4px 8px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .delete-button .fa-trash {
+    margin-right: 4px; /* Space between icon and text */
+  }
+/* CustomerDetails.css */
+
+.customer-details-container {
+    display: flex;
+  }
+  
+  .admin-sidebar {
+    width: 250px; /* Sidebar width */
+    height: 100vh; /* Full viewport height */
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+    transition: width 0.3s;
+  }
+  
+  .customer-details-content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+  }
+  
+  .customer-details-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%; /* Ensure full width for header */
+  }
+  
+  .add-customer-form {
+    margin-bottom: 30px;
+    width: 100%; /* Ensure full width for the form */
+    max-width: 600px; /* Limit maximum width of the form */
+  }
+  
+  .add-customer-form input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 22px); /* Full width minus padding */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-customer-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .customer-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure full width for customer list */
+    max-width: 800px; /* Limit maximum width of the list */
+  }
+  
+  .customer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .customer-info {
+    flex: 1;
+  }
+  
+  /* CustomerDetails.css */
+
+/* Other styles remain the same */
+
+/* CustomerDetails.css */
+
+/* CustomerDetails.css */
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 2px 6px; /* Smaller padding */
+    font-size: 10px; /* Smaller font size */
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text and icon horizontally */
+    height: 24px; /* Fixed height */
+    width: 80px; /* Fixed width */
+  }
+  
+  .delete-button .fa-trash {
+    font-size: 12px; /* Smaller icon size */
+    margin-right: 2px; /* Space between icon and text */
+  }
+  
+  .delete-button span {
+    display: inline-block;
+    font-size: 8px; /* Smaller font size for text */
+    vertical-align: middle; /* Center text vertically */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+    
