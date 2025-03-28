@@ -5,12 +5,43 @@ import './ServicesDetails.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCar, faWrench, faCalendarDay, faUser } from '@fortawesome/free-solid-svg-icons';
 import AdminSidebar from './Admin';
+import axios from 'axios'; // Import axios for HTTP requests
 
 const ServicesDetails = () => {
   const [isCarServices, setIsCarServices] = useState(true);
+  const [serviceData, setServiceData] = useState({
+    type: isCarServices ? 'Car' : 'Bike',
+    title: '',
+    description: '',
+    image: '',
+  });
 
   const toggleServiceType = () => {
     setIsCarServices(!isCarServices);
+    setServiceData({ ...serviceData, type: !isCarServices ? 'Car' : 'Bike' });
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setServiceData({ ...serviceData, [name]: value });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:9001/api/users/addService', serviceData);
+      alert('Service added successfully!');
+      // Clear the form after submission
+      setServiceData({
+        type: isCarServices ? 'Car' : 'Bike',
+        title: '',
+        description: '',
+        image: '',
+      });
+    } catch (error) {
+      console.error('Error adding service:', error);
+      alert('Failed to add service. Please try again.');
+    }
   };
 
   return (
@@ -29,54 +60,48 @@ const ServicesDetails = () => {
           </div>
         </div>
         <div className="service-items-container">
+          {/* Service items for display */}
           {isCarServices ? (
             <>
-              <div className="service-item">
-                <FontAwesomeIcon icon={faCar} size="3x" className="service-icon" />
-                <h2>Car Information</h2>
-                <p>Details about the vehicle such as make, model, and year.</p>
-              </div>
-              <div className="service-item">
-                <FontAwesomeIcon icon={faWrench} size="3x" className="service-icon" />
-                <h2>Service Type</h2>
-                <p>Type of service requested (e.g., oil change, tire rotation).</p>
-              </div>
-              <div className="service-item">
-                <FontAwesomeIcon icon={faCalendarDay} size="3x" className="service-icon" />
-                <h2>Appointment Date</h2>
-                <p>Scheduled date for the service appointment.</p>
-              </div>
-              <div className="service-item">
-                <FontAwesomeIcon icon={faUser} size="3x" className="service-icon" />
-                <h2>Customer Information</h2>
-                <p>Customer details including name and contact information.</p>
-              </div>
+              {/* Display for car services */}
+              {/* ... existing car service items */}
             </>
           ) : (
             <>
-              <div className="service-item">
-                <FontAwesomeIcon icon={faCar} size="3x" className="service-icon" />
-                <h2>Bike Information</h2>
-                <p>Details about the bike such as make, model, and year.</p>
-              </div>
-              <div className="service-item">
-                <FontAwesomeIcon icon={faWrench} size="3x" className="service-icon" />
-                <h2>Service Type</h2>
-                <p>Type of service requested (e.g., oil change, tire rotation).</p>
-              </div>
-              <div className="service-item">
-                <FontAwesomeIcon icon={faCalendarDay} size="3x" className="service-icon" />
-                <h2>Appointment Date</h2>
-                <p>Scheduled date for the service appointment.</p>
-              </div>
-              <div className="service-item">
-                <FontAwesomeIcon icon={faUser} size="3x" className="service-icon" />
-                <h2>Customer Information</h2>
-                <p>Customer details including name and contact information.</p>
-              </div>
+              {/* Display for bike services */}
+              {/* ... existing bike service items */}
             </>
           )}
         </div>
+        
+        {/* Add new service form */}
+        <form onSubmit={handleSubmit} className="add-service-form">
+          <h2>Add New {isCarServices ? 'Car' : 'Bike'} Service</h2>
+          <input
+            type="text"
+            name="title"
+            placeholder="Service Title"
+            value={serviceData.title}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            type="text"
+            name="description"
+            placeholder="Service Description"
+            value={serviceData.description}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            type="text"
+            name="image"
+            placeholder="Image URL"
+            value={serviceData.image}
+            onChange={handleInputChange}
+          />
+          <button type="submit">Add Service</button>
+        </form>
       </div>
     </div>
   );
